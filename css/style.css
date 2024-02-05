@@ -5,6 +5,7 @@ body {
 	letter-spacing: 2px;
 }
 
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -21,6 +22,30 @@ body {
 	top: 60%;
 }
 
+#git{
+	background: none;
+	border: 0;
+	padding-left: 10px;
+}
+#git1{
+	background: none;
+	border: 0;
+	padding-left: 10px;
+}
+#git2{
+	background: none;
+	border: 0;
+	padding-left: 10px;
+}
+
+
+#popup-message {
+	display: none;
+	background: white;
+	color: #f19706;
+
+
+  }
 .left {
 	background-color: #f19706;
 	width: 200px;

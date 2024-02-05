@@ -8,6 +8,9 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://kit.fontawesome.com/9c052984b8.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
 		rel="stylesheet">
 </head>
@@ -23,10 +26,16 @@
 				<div class="heading">
 					<p>CONTACT</p>
 				</div>
-				<p class="p1"><i class="material-icons icons1">call</i>+880-1789505924</p>
-				<p class="p1"><i class="material-icons icons1">email</i>ahmad@demo.com</p>
+				<div class="links">
+					<button id="git" class="closing" ><i class="fa-brands fa-facebook"></i> facebook</button>
+					
+				</div>
+				<button id="git1" class="closing" ><i class="fa-brands fa-github"></i> git-hub</button>
+				
+				<!-- <p class="p1"><i class="material-icons icons1">call</i>+880-1789505924</p> -->
+				
 			</div>
-
+			<button id="git2" class="closing" ><i class="fa-brands fa-whatsapp"></i> whatsapp</button>
 			<div class="box-1">
 				<div class="heading">
 					<p>LANGUAGES</p>
@@ -157,9 +166,66 @@
 
 		</div>
 	</div>
+	<div id="popup-message" title="">
+		<p>Would you like to visit the link?</p>
+	  </div>
+	  
+	  <!-- <button id="open-popup">Open Popup</button> -->
 
-
-
+	<script>
+		$(document).ready(function() {
+		  $("#git").click(function() {
+			$("#popup-message").dialog({
+			  modal: true,
+			  buttons: {
+				Yes: function() {
+				  window.location.href = "https://www.facebook.com/profile.php?id=100076541617836"; // Change this URL to your desired website
+				  $(this).dialog("close");
+				},
+				No: function() {
+				  $(this).dialog("close");
+				}
+			  }
+			});
+		  });
+		});
+	  </script>
+	<script>
+		$(document).ready(function() {
+		  $("#git1").click(function() {
+			$("#popup-message").dialog({
+			  modal: true,
+			  buttons: {
+				Yes: function() {
+				  window.location.href = "https://github.com/Ahmad-Alomgir"; // Change this URL to your desired website
+				  $(this).dialog("close");
+				},
+				No: function() {
+				  $(this).dialog("close");
+				}
+			  }
+			});
+		  });
+		});
+	  </script>
+	<script>
+		$(document).ready(function() {
+		  $("#git2").click(function() {
+			$("#popup-message").dialog({
+			  modal: true,
+			  buttons: {
+				Yes: function() {
+				  window.location.href = "https://api.whatsapp.com/send/?phone=%2B8801789505924&text&type=phone_number&app_absent=0"; // Change this URL to your desired website
+				  $(this).dialog("close");
+				},
+				No: function() {
+				  $(this).dialog("close");
+				}
+			  }
+			});
+		  });
+		});
+	  </script>
 
 </body>
 
